@@ -1,4 +1,4 @@
-// potetiometers give us an analog signal so these need to be Analog-In 
+// potentiometers give us an analog signal so these need to be Analog-In 
 const int redPotPin = A2,
           greenPotPin = A1,
           bluePotPin = A0;
