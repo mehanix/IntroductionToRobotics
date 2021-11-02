@@ -41,4 +41,4 @@ Write the code without using the `delay()` function!
 ##### Picture
 ![tema2](assets/tema2.jpeg)
 ##### Video
-<a href="https://www.youtube.com/watch?v=IFZMCG3HlsY"><img src="https://img.youtube.com/vi/IFZMCG3HlsY/0.jpg" alt="video hw 2"></a>
+<a href="https://youtu.be/LNvTyDPz8G8"><img src="https://img.youtube.com/vi/LNvTyDPz8G8/0.jpg" alt="video hw 2"></a>

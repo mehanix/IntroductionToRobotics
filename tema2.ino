@@ -35,7 +35,7 @@ unsigned int lastDebounceTime = 0,
   debounceDelay = 50,
 
   pedestrianGreenLedState = LOW,
-  pedestrianLedBlinkingInterval = 600,
+  pedestrianLedBlinkingInterval = 400,
   lastPedestrianLedChangeTime = 0,
 
   buzzerState = LOW,
@@ -44,7 +44,7 @@ unsigned int lastDebounceTime = 0,
   buzzerBlinkingTone = 700,
 
   buzzerCrossingInterval = 800,
-  buzzerBlinkingInterval = 600;
+  buzzerBlinkingInterval = 400;
 
 unsigned int globalState = 0; // the state of the entire system
 
@@ -101,31 +101,31 @@ void setState(int state) {
 
   switch (globalState) {
 
-  case STATE_CARS_CROSSING:
-    lastChangeTime = STATE_IDLE; // when we switch to this state, it means we completed the entire loop so we reset the last change time to idling
-    resetBuzzer();
-    setLedValues(LOW, LOW, HIGH, HIGH, LOW);
-    break;
-
-  case STATE_YELLOW_LIGHT:
-    lastChangeTime = millis();
-    setLedValues(LOW, HIGH, LOW, HIGH, LOW);
-    break;
-
-  case STATE_PEDESTRIANS_CROSSING:
-    lastChangeTime = millis();
-    resetBuzzer();
-    setLedValues(HIGH, LOW, LOW, LOW, HIGH);
-    break;
-
-  case STATE_PEDESTRIANS_BLINKING:
-    lastChangeTime = millis();
-    resetBuzzer();
-    setLedValues(HIGH, LOW, LOW, LOW, HIGH);
-    break;
-
-  default:
-    break;
+    case STATE_CARS_CROSSING:
+      lastChangeTime = STATE_IDLE; // when we switch to this state, it means we completed the entire loop so we reset the last change time to idling
+      resetBuzzer();
+      setLedValues(LOW, LOW, HIGH, HIGH, LOW);
+      break;
+  
+    case STATE_YELLOW_LIGHT:
+      lastChangeTime = millis();
+      setLedValues(LOW, HIGH, LOW, HIGH, LOW);
+      break;
+  
+    case STATE_PEDESTRIANS_CROSSING:
+      lastChangeTime = millis();
+      resetBuzzer();
+      setLedValues(HIGH, LOW, LOW, LOW, HIGH);
+      break;
+  
+    case STATE_PEDESTRIANS_BLINKING:
+      lastChangeTime = millis();
+      resetBuzzer();
+      setLedValues(HIGH, LOW, LOW, LOW, HIGH);
+      break;
+  
+    default:
+      break;
   }
 }
 
@@ -169,22 +169,22 @@ void doStateAction() {
 
   switch (globalState) {
     // these states just idle and do nothing in their alloted time slot; i'll leave them here for code clarity
-  case STATE_CARS_CROSSING:
-    break;
-
-  case STATE_YELLOW_LIGHT:
-    break;
-
+    case STATE_CARS_CROSSING:
+      break;
+  
+    case STATE_YELLOW_LIGHT:
+      break;
+  
     // buzzes
-  case STATE_PEDESTRIANS_CROSSING:
-    setBuzzerState(buzzerCrossingTone, buzzerCrossingInterval);
-    break;
-
+    case STATE_PEDESTRIANS_CROSSING:
+      setBuzzerState(buzzerCrossingTone, buzzerCrossingInterval);
+      break;
+  
     // blinks and buzzes more quickly
-  case STATE_PEDESTRIANS_BLINKING:
-    setBuzzerState(buzzerBlinkingTone, buzzerBlinkingInterval);
-    setGreenBlinkingLedState();
-    break;
+    case STATE_PEDESTRIANS_BLINKING:
+      setBuzzerState(buzzerBlinkingTone, buzzerBlinkingInterval);
+      setGreenBlinkingLedState();
+      break;
   }
 }
 
