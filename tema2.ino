@@ -168,13 +168,6 @@ void setGreenBlinkingLedState() {
 void doStateAction() {
 
   switch (globalState) {
-    // these states just idle and do nothing in their alloted time slot; i'll leave them here for code clarity
-    case STATE_CARS_CROSSING:
-      break;
-  
-    case STATE_YELLOW_LIGHT:
-      break;
-  
     // buzzes
     case STATE_PEDESTRIANS_CROSSING:
       setBuzzerState(buzzerCrossingTone, buzzerCrossingInterval);
@@ -185,6 +178,9 @@ void doStateAction() {
       setBuzzerState(buzzerBlinkingTone, buzzerBlinkingInterval);
       setGreenBlinkingLedState();
       break;
+
+    default:
+      break; // other states don't have an action
   }
 }
 
