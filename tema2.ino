@@ -168,6 +168,7 @@ void setGreenBlinkingLedState() {
 void doStateAction() {
 
   switch (globalState) {
+    
     // buzzes
     case STATE_PEDESTRIANS_CROSSING:
       setBuzzerState(buzzerCrossingTone, buzzerCrossingInterval);
