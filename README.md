@@ -42,3 +42,14 @@ Write the code without using the `delay()` function!
 ![tema2](assets/tema2.jpeg)
 ##### Video
 <a href="https://youtu.be/LNvTyDPz8G8"><img src="https://img.youtube.com/vi/LNvTyDPz8G8/0.jpg" alt="video hw 2"></a>
+
+#### Homework #3
+
+##### Task Requirements
+
+Create an Electromagnetic Field Detector (or ghost detector if you may) that shows data on a 7-segment display, as well as buzzes, when approaching electromagnetic fields.
+
+##### Picture
+![tema2](assets/3.jpg)
+##### Video
+<a href="https://youtu.be/XFmxfKWtlRE"><img src="https://img.youtube.com/vi/XFmxfKWtlRE/0.jpg" alt="video hw 3"></a>
