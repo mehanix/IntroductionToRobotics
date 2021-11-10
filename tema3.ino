@@ -19,6 +19,11 @@ int segments[segSize] = {
 const int buzzerPin = 10;
 const int antennaPin = A5;
 
+const int minimumAntennaValue = 0;
+const int maximumAntennaValue = 25;
+const int minimumNumberDigit = 0;
+const int maximumNumberDigit = 9;
+
 byte digitMatrix[noOfDigits][segSize - 1] = {
 // a  b  c  d  e  f  g
   {1, 1, 1, 1, 1, 1, 0}, // 0
@@ -77,8 +82,8 @@ void loop() {
     antennaValue = (averaging / sampleCount);
     Serial.println(antennaValue);
 
-    antennaValue = constrain(antennaValue, 0, 25);
-    antennaValue = map(antennaValue, 0, 25, 0, 9);
+    antennaValue = constrain(antennaValue, minimumAntennaValue, maximumAntennaValue);
+    antennaValue = map(antennaValue, minimumAntennaValue, maximumAntennaValue, minimumNumberDigit, maximumNumberDigit);
 
     displayNumber(antennaValue);
     buzz(antennaValue);
