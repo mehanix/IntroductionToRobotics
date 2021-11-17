@@ -9,23 +9,23 @@ If you've yet to read Asimov's Robots series, I highly recommend it.
 
 <hr>
 
-#### Homework #0
+### Homework #0
 Consisted of installing Arduino IDE and setting up this very repository. Hi!
 
-#### Homework #1
+### Homework #1
 
-##### Task Requirements
+#### Task Requirements
 
 Use 3 potentiometers to digitally control a RGB led.
 
-##### Picture
+#### Picture
 ![tema1](assets/tema1.jpeg)
-##### Video
+#### Video
 <a href="https://www.youtube.com/watch?v=cUwO6YBgpMw"><img src="https://img.youtube.com/vi/cUwO6YBgpMw/0.jpg" alt="video hw 1"></a>
 
-#### Homework #2
+### Homework #2
 
-##### Task Requirements
+#### Task Requirements
 
 Create a traffic light simulator with both car and pedestrian lights, as well as a buzzer. On a button press, the system will go through the following states:
 
@@ -38,18 +38,34 @@ Subsequent button presses should not reset the system until after it is idling a
 
 Write the code without using the `delay()` function!
 
-##### Picture
+#### Picture
 ![tema2](assets/tema2.jpeg)
-##### Video
+#### Video
 <a href="https://youtu.be/LNvTyDPz8G8"><img src="https://img.youtube.com/vi/LNvTyDPz8G8/0.jpg" alt="video hw 2"></a>
 
-#### Homework #3
+### Homework #3
 
-##### Task Requirements
+#### Task Requirements
 
 Create an Electromagnetic Field Detector (or ghost detector if you may) that shows data on a 7-segment display, as well as buzzes, when approaching electromagnetic fields.
 
-##### Picture
+#### Picture
 ![tema2](assets/3.jpg)
-##### Video
+#### Video
 <a href="https://youtu.be/XFmxfKWtlRE"><img src="https://img.youtube.com/vi/XFmxfKWtlRE/0.jpg" alt="video hw 3"></a>
+
+### Homework #4
+
+#### Task Requirements
+
+Using a Shift Register (as to free up pins on the Arduino), a 4-digit 7-segment display, and a joystick, write code that implements the following functionality:
+* Allow the user to tilt the joystick left/right in order to select a digit. The currently selected digit is marked with a blinking dot.
+* When clicking the joystick, "lock in" on the digit, allowing it to be changed using the up/down motions on your joystick.
+* Clicking again saves the value and allows the joystick to move through the digits again.
+* Use interrupts for the button, and also save/load the displayed number onto the EEPROM.
+
+
+#### Picture
+![tema2](assets/4.jpg)
+#### Video
+<a href="https://youtu.be/XFmxfKWtlRE"><img src="https://img.youtube.com/vi/XFmxfKWtlRE/0.jpg" alt="video hw 4"></a>
