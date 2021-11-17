@@ -5,7 +5,7 @@
 #define SYSTEM_STATE_LOCKED 1 // point is locked on one digit as to edit it
 
 #define JOYSTICK_READING_POSITIVE 1
-#define JOYSTICK_READING_NEGATIVE - 1
+#define JOYSTICK_READING_NEGATIVE -1
 
 const int dataPin = 12; // DS
 const int latchPin = 11; // STCP
@@ -16,25 +16,20 @@ const int segD2 = 6;
 const int segD3 = 5;
 const int segD4 = 4;
 
-int displayDigits[] = {
-  segD1,
-  segD2,
-  segD3,
-  segD4
-};
+int displayDigits[] = {segD1, segD2, segD3, segD4};
 
 int digitArray[16] = {
   //A B C D E F G DP 
-  B11111100, // 0 -> 252
-  B01100000, // 1
-  B11011010, // 2
-  B11110010, // 3
-  B01100110, // 4
-  B10110110, // 5
-  B10111110, // 6
-  B11100000, // 7
-  B11111110, // 8
-  B11110110 // 9
+    B11111100, // 0 -> 252
+    B01100000, // 1
+    B11011010, // 2
+    B11110010, // 3
+    B01100110, // 4
+    B10110110, // 5
+    B10111110, // 6
+    B11100000, // 7
+    B11111110, // 8
+    B11110110  // 9
 };
 
 int pointPosition = B0010;
