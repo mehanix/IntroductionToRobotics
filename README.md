@@ -50,7 +50,7 @@ Write the code without using the `delay()` function!
 Create an Electromagnetic Field Detector (or ghost detector if you may) that shows data on a 7-segment display, as well as buzzes, when approaching electromagnetic fields.
 
 #### Picture
-![tema2](assets/3.jpg)
+![tema3](assets/3.jpg)
 #### Video
 <a href="https://youtu.be/XFmxfKWtlRE"><img src="https://img.youtube.com/vi/XFmxfKWtlRE/0.jpg" alt="video hw 3"></a>
 
@@ -66,6 +66,6 @@ Using a Shift Register (as to free up pins on the Arduino), a 4-digit 7-segment 
 
 
 #### Picture
-![tema2](assets/4.jpg)
+![tema4](assets/4.jpg)
 #### Video
-<a href="https://youtu.be/XFmxfKWtlRE"><img src="https://img.youtube.com/vi/XFmxfKWtlRE/0.jpg" alt="video hw 4"></a>
+<a href="https://youtu.be/G-R-H1_Vy7E"><img src="https://img.youtube.com/vi/G-R-H1_Vy7E/0.jpg" alt="video hw 4"></a>
