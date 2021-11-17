@@ -72,7 +72,7 @@ void changeSystemState() {
   if (currentTime - lastSystemStateChange < debounceTime) { 
     return;
   }
-  
+    
   lastSystemStateChange = currentTime;
   if (systemState == SYSTEM_STATE_UNLOCKED) {
     systemState = SYSTEM_STATE_LOCKED;
@@ -161,12 +161,13 @@ void writeToDisplay() {
   determinePointState();
 
   for (int i = 0; i < displayCount; i++) {
-    showDigit(i);
     pointDigit = pointDisplayPosition % 2;
     pointDisplayPosition /= 2;
 
     currentDigit = digitArray[digitMemory[i]] | (pointDigit & pointState);
     writeReg(currentDigit);
+    showDigit(i);
+
     delay(muxDelay);
   }
 }
